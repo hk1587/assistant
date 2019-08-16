@@ -1,0 +1,55 @@
+#debug: true
+
+spring:
+  profiles: dev
+  thymeleaf:
+    # 开发阶段关闭缓存
+    cache: false
+  # 数据源
+  datasource:
+    url: jdbc:mysql://119.23.202.156:33966/flup?autoReconnect=true&useSSL=false
+    username: flup
+    password: FLUPpassword@2qq
+  redis:
+    database: 7
+    host: 119.23.202.156
+    port: 63791
+    password: redis
+    jedis:
+      pool:
+        max-idle: 50
+        max-wait: -1ms
+        max-active: 200
+        min-idle: 0
+    timeout: 10000ms
+
+server:
+  port: 1996
+  servlet:
+    context-path: /
+
+logging:
+  path: ./logs/
+
+
+assistant:
+  #用户身份加密
+  rsa:
+     privateKey: MIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBANgnPpcb24P3jjeDP+1KfqxedJqm5EKgF6m4XBlC7k
+                 QOrhleWBvczFsR3f7zOryGnfHO67KE/XhgHCqMPrus00oKL+pkZCWkh/kUoXJ3y3dqJ/OSaZnMkXCaJQE8HjkqpIFD
+                 9bfMJB5nw9QlT231HYwDAXxsC0kVQHuwPi3TS+/xAgMBAAECgYEAwbxLCT1avyl/OppVDeYbK3ttn7++D0lWbDRlt+6
+                 ZiD5wJSS+bBq2v1mAVCbFmnw9zKHd95/jX6UlGa2h/Kymoqtp+Lg3JrR73lx9Hz7cqZyQ/f4j94fUpA1wDf2w07oky
+                 DOPZnduYsL50bPXoXgU2f9/FMfNXeXaWj9kQhFTZMECQQD7ZFE5L/3DfnuuJOg6xkfgjrcaTIZIzzccEGErrJyLDpNR
+                 Bu1vObEGutfKrf08OPfMWS/n42nNUtAqLkh1X+JdAkEA3B2RCRsXmTPxkhaKx2Jp+/Izq1/w5OSsFhx0ff8SiwNGYkK
+                 UtcRK0kaXFHU+GUkxFt9v/ytZ8PSONiyeaJ6SpQJAa1nRXYxi3yKaCil0ifS2KOyIwFBBX8ItFGziMdZKGw+kVQuSRN
+                 bsA6WyFLjr1NW266qCTJHOUoG0pu6Qvp6teQJBAMgFTiC6L82WODUKqv3YXnsGcxGOU3eMnRxSq0E7ovwT88eivUQXp
+                 e5DG1MJ325W5nbkf/+ew1KEyR5NmX10a8kCQAP5VkeUTFK/ROzeFsQiUKZEtjBTEwlihvbbgEu4h7uta4/AXT4RTrmS
+                 Woj75qPvKx46IuD84jAuPfH+zIUg5/0=
+     publicKey: MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDYJz6XG9uD9443gz/tSn6sXnSapuRCoBepuFwZQu5EDq4ZXlgb3Mx
+                bEd3+8zq8hp3xzuuyhP14YBwqjD67rNNKCi/qZGQlpIf5FKFyd8t3aifzkmmZzJFwmiUBPB45KqSBQ/W3zCQeZ8PUJU9
+                t9R2MAwF8bAtJFUB7sD4t00vv8QIDAQAB
+
+
+
+  
+
