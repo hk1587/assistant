@@ -10,7 +10,8 @@ public class ResponseDTO {
     /**
      * desc: 状态码
      */
-    private String stateCode;      
+    private String stateCode;
+
     /**
      * desc: 返回数据给前端
      */
